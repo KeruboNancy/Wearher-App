@@ -10,21 +10,27 @@
   <body>
     <div class="display">
     <header>
-      <form>
-        <input type="search" placeholder="Enter a city..." required/>
-        <input type="submit" value="Search"/>
+      <form class="search-form">
+        <input type="search" placeholder="Enter a city..." required class="search-form-input"/>
+        <input type="submit" value="Search" class="search-form-button"/>
       </form>
     </header>
     <main>
+      <div class="display-data">
       <div>
-    <h1>Paris</h1>
-    <p>
+    <h1 class="city">Paris</h1>
+    <p class="display-details">
       Teusday 14:49, scattered clouds
       <br />
-      Humidity: 66%, Wind:3.13km/h
+      Humidity: <strong>66%</strong>, Wind:<strong>3.13km/h</strong>
     </p>
     </div>
-    🌥️12&degC
+    <div class="temperature">
+   <div class="display-emoji"> ⛅ </div>
+   <div class="display-temperature">12</div>
+   <div class="display-unit">&degC</div>
+   </div>
+   </div>
     </main>
 
     <footer>
@@ -32,5 +38,6 @@
         <a href="https://github.com/KeruboNancy" target="_blank"> Nancy Kerubo </a>, is <a href="https://github.com/KeruboNancy/Wearher-App" target="_blank"> open-sourced on Github </a> and <a href="https://main--waeather-app.netlify.app/" target="_blank">hosted on Netlify</a>
     </footer>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
