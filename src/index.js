@@ -7,13 +7,15 @@ function updateWeather(response) {
   let windElement = document.querySelector("#wind");
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
-
+  let emojiElement = document.querySelector("#emoji");
+  
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = Math.round(temperature);
   detailedElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
   timeElement.innerHTML = formatDate(date);
+  emojiElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="display-emoji" />`;
 }
 
 function formatDate(date){
